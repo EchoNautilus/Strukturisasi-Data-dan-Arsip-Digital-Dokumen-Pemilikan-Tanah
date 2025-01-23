@@ -11,20 +11,68 @@ Proyek ini bertujuan untuk mengonversi dokumen tanah yang telah dipindai ke form
 - **Penyimpanan Hasil:** Hasil OCR disimpan dalam format CSV yang terstruktur.
 - **User-Friendliness:** Disertai dengan panduan dalam bentuk video dan manual.
 
-## **Struktur Folder**
+## **Struktur Folder yang Dibutuhkan**
 
 ```plaintext
-|-- Berkas Files/
+|-- BERKAS LETTER C/
 |   |-- berkas 0-100.pdf
 |   |-- berkas 100-200.pdf
 |   |-- ...
+|   |-- berkas 900-968.pdf
+|   |-- berkas sisa sobekan 400-500.pdf
+```
+
+## **Hirarki Folder Output yang Diharapkan**
+
+```plaintext
 |-- file png berkas 0-100/
-|   |-- langkah 1.1 konversi ke grayscale/
-|   |-- langkah 1.2 tingkatkan kontras/
-|   |-- ...
-|-- preprocess_csv.ipynb
-|-- ocr.ipynb
-|-- README.md
+|   |-- langkah 1.1 konversi ke grayscale
+|   |-- |-- halaman_1.png
+|   |-- |-- halaman_2.png
+|   |-- |-- ...
+|   |-- |-- halaman_100.png
+|   |-- langkah 1.2 meningkatkan kontras menggunakan CLAHE
+|   |-- |-- halaman_1.png
+|   |-- |-- halaman_2.png
+|   |-- |-- ...
+|   |-- |-- halaman_100.png
+|   |-- langkah 1.3 menghapus noise menggunakan median blurring
+|   |-- |-- halaman_1.png
+|   |-- |-- halaman_2.png
+|   |-- |-- ...
+|   |-- |-- halaman_100.png
+|   |-- langkah 1.4 normalisasi dimensi
+|   |-- |-- halaman_1.png
+|   |-- |-- halaman_2.png
+|   |-- |-- ...
+|   |-- |-- halaman_100.png
+|   |-- langkah 2.1 mendeteksi struktur tabel
+|   |-- |-- halaman_1.png
+|   |-- |-- halaman_2.png
+|   |-- |-- ...
+|   |-- |-- halaman_100.png
+|   |-- langkah 2.2 menghapus struktur tabel untuk mengekstraksi teks
+|   |-- |-- halaman_1.png
+|   |-- |-- halaman_2.png
+|   |-- |-- ...
+|   |-- |-- halaman_100.png
+|   |-- langkah 3.1 menerapkan OCR untuk mengekstrak teks
+|   |-- |-- halaman_1.txt
+|   |-- |-- halaman_2.txt
+|   |-- |-- ...
+|   |-- |-- halaman_100.txt
+|   |-- langkah 3.2 membersihkan hasil OCR
+|   |-- |-- halaman_1.txt
+|   |-- |-- halaman_2.txt
+|   |-- |-- ...
+|   |-- |-- halaman_100.txt
+|   |-- langkah 3.3 menyimpan hasil OCR dengan header yang benar
+|   |-- |--berkas 0-100_OCR_results.csv
+|-- file png berkas 100-200/
+|-- file png berkas 200-300/
+|-- ...
+|-- file png berkas 900-968/
+|-- file png berkas sisa sobekan 400-500/
 ```
 
 ## **Prasyarat**
