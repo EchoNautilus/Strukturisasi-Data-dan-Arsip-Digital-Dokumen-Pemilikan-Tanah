@@ -79,7 +79,7 @@ Proyek ini bertujuan untuk mengonversi dokumen tanah yang telah dipindai ke form
 
 - **Python 3.9 atau lebih baru**
 - **Tesseract OCR:** Pastikan Tesseract OCR telah diinstal dan dapat diakses melalui PATH sistem.
-- **IDE (Integrated Development Environment):** Pastikan sudah ada IDE seperti Virtual Studio Code.
+- **IDE (Integrated Development Environment):** Pastikan sudah diinstal IDE seperti Virtual Studio Code.
 
 ## **Cara Menjalankan Proyek**
 
