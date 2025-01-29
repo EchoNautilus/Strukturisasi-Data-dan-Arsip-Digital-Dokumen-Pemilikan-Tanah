@@ -90,8 +90,7 @@ Proyek ini bertujuan untuk mengonversi dokumen tanah yang telah dipindai ke form
 
 ## **Panduan Pengguna**
 
-- Lihat tutorial di Video Panduan TODO.
-- Manual pengguna tersedia dalam file TODO.
+- Manual pengguna tersedia dalam file `PANDUAN PENGGUNAAN PIPELINE OCR.pdf`.
 
 ## **Troubleshooting**
 
